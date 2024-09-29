@@ -31,7 +31,6 @@ body {
 	}
 	#navigation-bar ul li { 
 		float: left;
-		justify-content: "space-around";
 	}
 	#navigation-bar ul ul {
 		display: none;

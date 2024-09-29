@@ -1,44 +1,67 @@
 body {
 	width: 90%;
 	max-width: 1024px;
-	background-color: white;
 	margin: 15px auto;
-	border: 1px solid black; 
+	border: 1px solid black;
+	background-color: white; 
 }
 	h2 { 
-		padding: 1em; 
+		padding-left: 1em; 
+		padding-right: 1em;
 	}
 	header { 
-		border-bottom: 2px solid #ef9c00; 
+		border-bottom: 2px solid black;
+		border-top: 2px solid black;
+		display: flex;
 	}
 	main {
-		height: 350px; /* to give the sidebar some height for its border */
+		
 		width: 66%;
 		float: right;
 		border-right: 2px solid #ef9c00; 
 	}
 	aside {
+		height: 100%;
 		width: 33%;
 		float: left; 
+		border-right: 2px solid black;
 	}
 	footer {
 	clear: both;
-	border-top: 2px solid #ef9c00; }
+	border-top: 2px solid black;
+	display: flex; 
+	}
+
+	#navigation-bar {
+		background-color: white;
+		width: 100%;
+		height: 100%;
+	}
 
 	#navigation-bar ul {
 		list-style: none;
 		position: relative;
+		display: inline-block;
+		width: 100%;
+		height: 100%;
 	}
 	#navigation-bar ul li { 
 		float: left;
+		padding-right: 5%;
+		height: 100%;
+		width: 25%;
+		text-align: center;
 	}
 	#navigation-bar ul ul {
 		display: none;
 		position: absolute;
-		top: 100%;
+		top: 75%;
 	}
 	#navigation-bar ul ul li { 
 		float: none;
+		background-color: white;
+		width: 10%;
+		border: 2px solid black;
 	}
 	#navigation-bar ul li:hover > ul {
 		display: block;
@@ -47,4 +70,41 @@ body {
 		content: "";
 		display: block;
 		clear: both;
+	}
+
+	#navigation-bar ul li a {
+		text-decoration: none;
+	}
+
+	.self-photo {
+		max-height: 10%;
+		max-width: 10%;
+		min-width: 10%;
+		min-height: 10%;
+		width: auto;
+		height: auto;
+	}
+
+	.tigers-clinch {
+		max-width: 50%;
+		max-height: 50%;
+	}
+
+	header h1 {
+		padding-left: 5%;
+		float: right;
+		white-space: nowrap;
+	}
+
+	.content {
+		background-color: #ef9c00;
+	}
+
+	.current {
+		background-color: #ef9c00;
+		border: 2px solid black;
+		border-radius: 5px;
+		height: 100%;
+		width: 100%;
+		
 	}

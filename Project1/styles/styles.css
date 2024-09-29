@@ -1,0 +1,51 @@
+body {
+	width: 90%;
+	max-width: 1024px;
+	background-color: white;
+	margin: 15px auto;
+	border: 1px solid black; 
+}
+	h2 { 
+		padding: 1em; 
+	}
+	header { 
+		border-bottom: 2px solid #ef9c00; 
+	}
+	main {
+		height: 350px; /* to give the sidebar some height for its border */
+		width: 66%;
+		float: right;
+		border-right: 2px solid #ef9c00; 
+	}
+	aside {
+		width: 33%;
+		float: left; 
+	}
+	footer {
+	clear: both;
+	border-top: 2px solid #ef9c00; }
+
+	#navigation-bar ul {
+		list-style: none;
+		position: relative;
+	}
+	#navigation-bar ul li { 
+		float: left;
+		justify-content: "space-around";
+	}
+	#navigation-bar ul ul {
+		display: none;
+		position: absolute;
+		top: 100%;
+	}
+	#navigation-bar ul ul li { 
+		float: none;
+	}
+	#navigation-bar ul li:hover > ul {
+		display: block;
+	}
+	#navigation-bar > ul::after {
+		content: "";
+		display: block;
+		clear: both;
+	}

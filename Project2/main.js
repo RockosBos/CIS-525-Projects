@@ -14,6 +14,8 @@ let name;
 let highScore = 0;
 let correct = 0;
 
+let totalClicks = 0;
+
 let cards = [
 	
 
@@ -101,6 +103,7 @@ function createRow(rowNum){
 
 function userSelectCard(cardNum){
 	if(!cards.find(({id}) => id === cardNum).shown){
+		
 		if(cardsSelected <= 1){
 			setInterval(flipCard(cardNum), 2500);
 			cardsSelected++;
@@ -121,6 +124,10 @@ function userSelectCard(cardNum){
 		if(correct > localStorage.highScore){
 			highScore = correct;
 			localStorage.setItem("highScore", highScore);
+		}
+		if(correct == localStorage.numCards){
+			alert("Congrats, you win! " + (numCards / totalClicks) * 100 + "% correct selections"
+			);
 		}
 		console.log("Correct: " + correct + " High: " + highScore);
 		document.getElementById("high_score").innerHTML = (localStorage.highScore).toString();
@@ -146,6 +153,7 @@ function flipCard(cardID){
 				document.getElementById(cardID).children[0].setAttribute("src", "./images/card_" + ((cardID % 24) + 1) + ".png");
 				document.getElementById(cardID).children[0].setAttribute("style", "opacity: 1; transition: opacity 0.5s;");
 			}, 250);
+			totalClicks++;
 		}
 }
 
@@ -163,5 +171,4 @@ function addRow(count){
 		
 		clearRow();
 	}
-	document
 }

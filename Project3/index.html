@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Demonstration Registration</title>
+    <link type="text/css" rel="stylesheet" href="registration.css"> 
+	<script type="text/javascript" src="./main.js"></script>
+</head>
+<body>
+    <main>
+		<a href="./list.html">View Student List</a>
+		<div>
+			<h1>Demonstration Registration</h1>
+			<form action="entry.php" method="post">
+				<label for="UMID">UMID: </label>
+				<input type="text" name="UMID" required><br>
+
+				<label for="FirstName">First Name: </label>
+				<input type="text" name="FirstName" required><br>
+
+				<label for="LastName">Last Name: </label>
+				<input type="text" name="LastName" required><br>
+
+				<label for="ProjectTitle">Project Title:</label>
+				<input type="text" name="ProjectTitle" ><br>
+
+				<label for="Email">Email: </label>
+				<input type="text" name="Email" ><br>
+
+				<label for="PhoneNumber">Phone Number: </label>
+				<input type="text" name="PhoneNumber" ><br>
+
+				<div>
+					<input type="submit" value="Register">
+					<input type="reset" value="Clear">
+				</div>
+			</form>
+		</div>
+	</main>
+</body>
+</html>
